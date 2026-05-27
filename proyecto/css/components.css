@@ -1,0 +1,185 @@
+/* BOTONES */
+
+.btn,
+button{
+
+    background:var(--verde);
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+/* CARDS */
+
+.card-producto{
+
+    background:white;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+    padding-bottom:20px;
+
+}
+
+.card-producto img{
+
+    height:250px;
+    object-fit:cover;
+
+}
+
+.card-producto h3{
+
+    padding:15px 15px 5px;
+
+}
+
+.card-producto p{
+
+    padding:0 15px 15px;
+
+    color:var(--gris);
+
+}
+
+.card-producto button{
+
+    margin-left:15px;
+
+}
+
+/* FAVORITOS */
+
+.favorito{
+
+    background:#ddd;
+    color:black;
+
+}
+
+.favorito:active{
+
+    background:red;
+    color:white;
+
+}
+
+/* PRINCIPIOS */
+
+.principio{
+
+    text-align:center;
+
+    background:var(--beige);
+
+    padding:30px;
+
+    border-radius:10px;
+
+}
+
+.principio img{
+
+    width:80px;
+    margin:auto auto 20px;
+
+}
+
+/* TESTIMONIOS */
+
+.testimonio{
+
+    min-width:300px;
+
+    background:white;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+
+    text-align:center;
+
+}
+
+.testimonio img{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:auto auto 20px;
+
+}
+
+/* FORMULARIO */
+
+.formulario input,
+.formulario textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    border:2px solid #ccc;
+
+    border-radius:5px;
+
+    outline:none;
+
+}
+
+/* VALIDACIÓN */
+
+.formulario input:valid,
+.formulario textarea:valid{
+
+    border:2px solid green;
+
+}
+
+.formulario input:invalid,
+.formulario textarea:invalid{
+
+    border:2px solid red;
+
+}
+
+.formulario textarea{
+
+    min-height:150px;
+    resize:none;
+
+}
+
+/* REDES */
+
+.redes-sociales a{
+
+    background:var(--verde);
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+}

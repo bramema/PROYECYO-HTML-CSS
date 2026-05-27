@@ -1,0 +1,85 @@
+/* TRANSICIONES */
+
+.card-producto{
+
+    transition:0.3s;
+
+}
+
+.card-producto:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* BOTONES */
+
+button,
+.btn{
+
+    transition:0.3s;
+
+}
+
+button:hover,
+.btn:hover{
+
+    background:var(--verde-oscuro);
+
+}
+
+/* LINKS */
+
+.nav a{
+
+    transition:0.3s;
+
+}
+
+.nav a:hover{
+
+    color:black;
+
+}
+
+/* PRINCIPIOS */
+
+.principio{
+
+    transition:0.3s;
+
+}
+
+.principio:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* TESTIMONIOS */
+
+.testimonio{
+
+    transition:0.3s;
+
+}
+
+.testimonio:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* REDES */
+
+.redes-sociales a{
+
+    transition:0.3s;
+
+}
+
+.redes-sociales a:hover{
+
+    transform:scale(1.2);
+
+}

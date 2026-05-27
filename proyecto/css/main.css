@@ -1,0 +1,53 @@
+/* RESET */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* VARIABLES */
+
+:root{
+
+  --verde:#2ecc71;
+  --verde-oscuro:#27ae60;
+  --beige:#f5f5dc;
+  --blanco:#ffffff;
+  --negro:#222222;
+  --gris:#777777;
+
+}
+
+/* TIPOGRAFÍA */
+
+body{
+
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--blanco);
+  color:var(--negro);
+  line-height:1.6;
+
+
+}
+
+img{
+
+  width:100%;
+  display:block;
+  
+
+}
+
+a{
+
+  text-decoration:none;
+
+}
+
+ul{
+
+  list-style:none;
+
+}
+
