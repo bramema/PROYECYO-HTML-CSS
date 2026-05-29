@@ -67,14 +67,14 @@ button{
 .favorito{
 
     background:#ddd;
-    color:black;
+    color:rgb(255, 0, 0);
 
 }
 
 .favorito:active{
 
-    background:red;
-    color:white;
+    background:rgb(248, 153, 153);
+    color:rgb(224, 126, 126);
 
 }
 
