@@ -39,15 +39,17 @@ img{
 
 }
 
-a{
+.a{
 
   text-decoration:none;
+  color: var(--verde);
 
 }
 
 ul{
 
   list-style:none;
+  
 
 }
 
