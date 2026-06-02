@@ -1,5 +1,3 @@
-Capturas de pantalla de las vistas en móvil y escritorio.
-
 # PROYECYO-HTML-CSS
 Descripción del Proyecto
 
