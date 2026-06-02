@@ -16,4 +16,4 @@ GitHub: Plataforma utilizada para almacenar y compartir el repositorio del proye
 Visual Studio Code: Editor de código empleado para el desarrollo de la aplicación web.
 
 
-Las capturas de pantalla estan en una carpeta en el CSS
+Las capturas de pantalla estan en una carpeta en imagenes 
