@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViveVerde | Calculadora</title>
+
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../proyecto/css/caluculadora.css">
+</head>
+<body>
+
+</div>
+<header class="header">
+    <div class="logo">
+        <img src="imagenas_para_el_proyecto/logo/logo3.png" alt="">
+    </div>
+
+    <div class="a">
+        <h1 class="a">Calculadora de Carbono</h1>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="sobre-nosotros.html">Nosotros</a>
+        <a href="contacto.html">contacto</a>
+        <a href="calculadora.html">calculadora</a>
+    </nav>
+
+    
+</header>
+
+<section class="calculadora">
+
+    <form action="resultado.html" class="form-calculadora">
+
+        <div class="titulo">
+            <span>CALCULADORA</span>
+            <h1>Calcula tu Huella de Carbono</h1>
+
+            <p>
+                Descubre tu impacto ambiental y cómo mejorarlo.
+                Completa el formulario para obtener tu estimación personalizada.
+            </p>
+        </div>
+
+        <div class="barra-progreso"></div>
+
+        <!-- HOGAR -->
+        <div class="bloque">
+
+            <h3>
+                <span class="icono">🏠</span>
+                1. Hogar
+            </h3>
+
+            <label for="energia">
+                Consumo de Energía Mensual
+            </label>
+
+            <div class="valor-slider">
+                <span id="valorEnergia">350</span>
+                <small>kWh</small>
+            </div>
+
+            <input
+                type="range"
+                id="energia"
+                min="0"
+                max="1000"
+                value="350">
+
+            <div class="escala">
+                <span>0</span>
+                <span>250</span>
+                <span>500</span>
+                <span>750</span>
+                <span>1000+</span>
+            </div>
+
+        </div>
+
+        <!-- TRANSPORTE -->
+        <div class="bloque">
+
+            <h3>
+                <span class="icono">🚗</span>
+                2. Transporte
+            </h3>
+
+            <label>
+                ¿Cuál es tu medio de transporte principal?
+            </label>
+
+            <div class="transportes">
+
+                <input
+                    type="radio"
+                    id="auto"
+                    name="transporte"
+                    checked>
+
+                <label
+                    for="auto"
+                    class="opcion-transporte">
+
+                    <span class="emoji">🚗</span>
+                    <span>Auto Privado</span>
+
+                </label>
+
+                <input
+                    type="radio"
+                    id="publico"
+                    name="transporte">
+
+                <label
+                    for="publico"
+                    class="opcion-transporte">
+
+                    <span class="emoji">🚌</span>
+                    <span>Transporte Público</span>
+
+                </label>
+
+                <input
+                    type="radio"
+                    id="bici"
+                    name="transporte">
+
+                <label
+                    for="bici"
+                    class="opcion-transporte">
+
+                    <span class="emoji">🚲</span>
+                    <span>Bicicleta / A pie</span>
+
+                </label>
+
+            </div>
+
+            <label>
+                Kilómetros recorridos mensualmente
+            </label>
+
+            <input
+                type="number"
+                placeholder="Ej. 1200"
+                class="km-input">
+
+        </div>
+
+        <button type="submit">
+            Calcular Impacto →
+        </button>
+
+    </form>
+
+</section>
+
+    <footer class="footer">
+
+        <p>© 2026 ViveVerde</p>
+
+    </footer>
+    
+</body>
+</html>
