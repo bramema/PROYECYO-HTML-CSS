@@ -1,138 +1,2118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViveVerde | Productos</title>
-
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <div class="logo">
-            <img src="imagenas_para_el_proyecto/logo/logo3.png" alt="">
-            
-        </div>
-
-        <div>
-            <h1 class="a">Productos Destacados</h1>
-        </div>
-
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="sobre-nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="calculadora.html">calculadora</a>
-        </nav>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ViveVerde: productos ecológicos y reutilizables para hacer de cada día una elección más consciente."
+    />
+    <meta name="theme-color" content="#284b36" />
+    <title>ViveVerde | Nuestros productos</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="announcement" role="region" aria-label="Nuestro propósito">
+      Pequeñas acciones, un planeta más verde.
+      <span
+        >Descubre una forma de vivir más consciente
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+      ></span>
+    </div>
+    <header class="header shell">
+      <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+        ><span
+          >vive<span class="brand-light">verde</span
+          ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+        ></a
+      >
+      <nav class="nav" id="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a
+        ><a href="productos.html" aria-current="page">Productos</a
+        ><a href="sobre-nosotros.html">Nosotros</a
+        ><a href="contacto.html">Contacto</a
+        ><a href="calculadora.html">Calculadora de huella</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="search-open"
+          aria-label="Buscar productos"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" />
+          </svg></button
+        ><a
+          class="icon-button saved-link"
+          href="productos.html?favoritos=1"
+          aria-label="Ver favoritos"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+            /></svg
+          ><span id="favorite-count">0</span></a
+        ><button
+          class="icon-button menu-button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </header>
-
-    <!-- CATÁLOGO -->
-
-    <main class="contenedor-catalogo">
-
-        <!-- SIDEBAR -->
-
-        <aside class="sidebar">
-
-            <h3>Categorías</h3>
-
-            <ul>
-                <a href="/proyecto/kit.html"><button class="boton-catalogo">Kit</button></a>
-                <a href="/proyecto/botellas.html"><button class="boton-catalogo">Botellas</button></a>
-                <a href="/proyecto/jabones.html"><button class="boton-catalogo">Jabones</button></a>
-                <a href="/proyecto/bolsas.html"><button class="boton-catalogo">Bolsas</button></a>
-                <a href="/proyecto/cubiertos.html"><button class="boton-catalogo">cubiertos</button></a>
-                <a href="/proyecto/cepillos.html"><button class="boton-catalogo">Cepillo</button></a>
-                
-            </ul>
-
-        </aside>
-
-        <!-- PRODUCTOS -->
-
-        <section class="catalogo">
-
-            
-
-            <div class="grid-catalogo">
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/kit.png">
-                    <h3>Kit Eco</h3>
-                    <p>$40.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/botella ecologica.png">
-                    <h3>Botella</h3>
-                    <p>$30.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/jabon.png">
-                    <h3>Jabón</h3>
-                    <p>$15.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/cepillos bambu.png">
-                    <h3>Cepillo</h3>
-                    <p>$12.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                
-                
+    <main id="contenido">
+      <div class="page-intro shell">
+        <span class="eyebrow">MENOS DESECHABLES, MÁS VIDA</span>
+        <h1>Esenciales con propósito.</h1>
+        <p>
+          Pequeñas elecciones que se convierten en grandes hábitos. Encuentra tu
+          próximo cambio.
+        </p>
+      </div>
+      <section class="shell catalog-section">
+        <div class="catalog-toolbar">
+          <p id="results-count">6 productos · Precios en COP</p>
+          <label class="sort-label"
+            >Ordenar por
+            <select id="product-sort">
+              <option value="default">Destacados</option>
+              <option value="asc">Menor precio</option>
+              <option value="desc">Mayor precio</option>
+            </select></label
+          >
+        </div>
+        <nav class="category-tabs" aria-label="Categorías">
+          <a class="category-tab" aria-current="page" href="productos.html"
+            >Todos</a
+          ><a class="category-tab" href="kit.html">Kit ecológico</a
+          ><a class="category-tab" href="cubiertos.html">Cubiertos de bambú</a
+          ><a class="category-tab" href="jabones.html">Jabón natural</a
+          ><a class="category-tab" href="botellas.html">Botella reutilizable</a
+          ><a class="category-tab" href="cepillos.html">Cepillo de bambú</a
+          ><a class="category-tab" href="bolsas.html">Bolsa reutilizable</a>
+        </nav>
+        <div class="product-grid catalog-grid">
+          <article
+            class="product-card"
+            data-category="Kits ecológicos"
+            data-search="kit ecológico kits ecológicos tu primer paso hacia una vida más verde."
+            data-product-id="kit"
+          >
+            <div class="product-photo">
+              <a href="kit.html" aria-label="Explorar Kit ecológico"
+                ><img
+                  src="assets/productos/kit.webp"
+                  alt="Kit ecológico"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Esenciales</span
+              ><button
+                class="favorite-button"
+                data-favorite="kit"
+                aria-label="Guardar Kit ecológico en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
             </div>
-
-            
-            </section>
-
-            <!-- PRODUCTOS JUNTOS -->
-
-        <section class="catalogo">
-
-            <div class="grid-catalogo">
-
-               
-                </article>
+            <div class="product-info">
+              <span class="product-category">Kits ecológicos</span>
+              <h3><a href="kit.html">Kit ecológico</a></h3>
+              <p>Tu primer paso hacia una vida más verde.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="kit.html"
+                  class="product-arrow"
+                  aria-label="Ver Kit ecológico"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
             </div>
-
-            </section>
-
-            <!-- PAGINACIÓN -->
-
-            <div class="paginacion">
-
-                <button>Anterior</button>
-                <button>1</button>
-                
-                <button>Siguiente</button>
-
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos"
+          >
+            <div class="product-photo">
+              <a href="cubiertos.html" aria-label="Explorar Cubiertos de bambú"
+                ><img
+                  src="assets/productos/cubiertos.webp"
+                  alt="Cubiertos de bambú"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos"
+                aria-label="Guardar Cubiertos de bambú en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
             </div>
-
-        </section>
-
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3><a href="cubiertos.html">Cubiertos de bambú</a></h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="jabón natural cuidado personal un pequeño cuidado para ti y el planeta."
+            data-product-id="jabones"
+          >
+            <div class="product-photo">
+              <a href="jabones.html" aria-label="Explorar Jabón natural"
+                ><img
+                  src="assets/productos/jabon.webp"
+                  alt="Jabón natural"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Natural</span
+              ><button
+                class="favorite-button"
+                data-favorite="jabones"
+                aria-label="Guardar Jabón natural en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="jabones.html">Jabón natural</a></h3>
+              <p>Un pequeño cuidado para ti y el planeta.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="jabones.html"
+                  class="product-arrow"
+                  aria-label="Ver Jabón natural"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Botellas"
+            data-search="botella reutilizable botellas hidrátate hoy. reutiliza mañana."
+            data-product-id="botellas"
+          >
+            <div class="product-photo">
+              <a href="botellas.html" aria-label="Explorar Botella reutilizable"
+                ><img
+                  src="assets/productos/botella ecologica.webp"
+                  alt="Botella reutilizable"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Para cada día</span
+              ><button
+                class="favorite-button"
+                data-favorite="botellas"
+                aria-label="Guardar Botella reutilizable en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Botellas</span>
+              <h3><a href="botellas.html">Botella reutilizable</a></h3>
+              <p>Hidrátate hoy. Reutiliza mañana.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="botellas.html"
+                  class="product-arrow"
+                  aria-label="Ver Botella reutilizable"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="cepillo de bambú cuidado personal una rutina más natural desde la mañana."
+            data-product-id="cepillos"
+          >
+            <div class="product-photo">
+              <a href="cepillos.html" aria-label="Explorar Cepillo de bambú"
+                ><img
+                  src="assets/productos/cepillos bambu.webp"
+                  alt="Cepillo de bambú"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Bambú</span
+              ><button
+                class="favorite-button"
+                data-favorite="cepillos"
+                aria-label="Guardar Cepillo de bambú en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="cepillos.html">Cepillo de bambú</a></h3>
+              <p>Una rutina más natural desde la mañana.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="cepillos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cepillo de bambú"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Bolsas"
+            data-search="bolsa reutilizable bolsas tu compañera para compras conscientes."
+            data-product-id="bolsas"
+          >
+            <div class="product-photo">
+              <a href="bolsas.html" aria-label="Explorar Bolsa reutilizable"
+                ><img
+                  src="assets/productos/bolsas ecologica.webp"
+                  alt="Bolsa reutilizable"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="bolsas"
+                aria-label="Guardar Bolsa reutilizable en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bolsas</span>
+              <h3><a href="bolsas.html">Bolsa reutilizable</a></h3>
+              <p>Tu compañera para compras conscientes.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="bolsas.html"
+                  class="product-arrow"
+                  aria-label="Ver Bolsa reutilizable"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <template id="variant-products"
+          ><article
+            class="product-card"
+            data-category="Kits ecológicos"
+            data-search="kit ecológico · modelo 1 kits ecológicos tu primer paso hacia una vida más verde."
+            data-product-id="kit-0"
+          >
+            <div class="product-photo">
+              <a href="kit.html" aria-label="Explorar Kit ecológico · Modelo 1"
+                ><img
+                  src="assets/productos/kit-eco/image.webp"
+                  alt="Kit ecológico · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Esenciales</span
+              ><button
+                class="favorite-button"
+                data-favorite="kit-0"
+                aria-label="Guardar Kit ecológico · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kits ecológicos</span>
+              <h3><a href="kit.html">Kit ecológico · Modelo 1</a></h3>
+              <p>Tu primer paso hacia una vida más verde.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="kit.html"
+                  class="product-arrow"
+                  aria-label="Ver Kit ecológico · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Kits ecológicos"
+            data-search="kit ecológico · modelo 2 kits ecológicos tu primer paso hacia una vida más verde."
+            data-product-id="kit-1"
+          >
+            <div class="product-photo">
+              <a href="kit.html" aria-label="Explorar Kit ecológico · Modelo 2"
+                ><img
+                  src="assets/productos/kit-eco/image (1).webp"
+                  alt="Kit ecológico · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Esenciales</span
+              ><button
+                class="favorite-button"
+                data-favorite="kit-1"
+                aria-label="Guardar Kit ecológico · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kits ecológicos</span>
+              <h3><a href="kit.html">Kit ecológico · Modelo 2</a></h3>
+              <p>Tu primer paso hacia una vida más verde.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="kit.html"
+                  class="product-arrow"
+                  aria-label="Ver Kit ecológico · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Kits ecológicos"
+            data-search="kit ecológico · modelo 3 kits ecológicos tu primer paso hacia una vida más verde."
+            data-product-id="kit-2"
+          >
+            <div class="product-photo">
+              <a href="kit.html" aria-label="Explorar Kit ecológico · Modelo 3"
+                ><img
+                  src="assets/productos/kit-eco/image (2).webp"
+                  alt="Kit ecológico · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Esenciales</span
+              ><button
+                class="favorite-button"
+                data-favorite="kit-2"
+                aria-label="Guardar Kit ecológico · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kits ecológicos</span>
+              <h3><a href="kit.html">Kit ecológico · Modelo 3</a></h3>
+              <p>Tu primer paso hacia una vida más verde.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="kit.html"
+                  class="product-arrow"
+                  aria-label="Ver Kit ecológico · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Kits ecológicos"
+            data-search="kit ecológico · modelo 4 kits ecológicos tu primer paso hacia una vida más verde."
+            data-product-id="kit-3"
+          >
+            <div class="product-photo">
+              <a href="kit.html" aria-label="Explorar Kit ecológico · Modelo 4"
+                ><img
+                  src="assets/productos/kit-eco/image (3).webp"
+                  alt="Kit ecológico · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Esenciales</span
+              ><button
+                class="favorite-button"
+                data-favorite="kit-3"
+                aria-label="Guardar Kit ecológico · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Kits ecológicos</span>
+              <h3><a href="kit.html">Kit ecológico · Modelo 4</a></h3>
+              <p>Tu primer paso hacia una vida más verde.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="kit.html"
+                  class="product-arrow"
+                  aria-label="Ver Kit ecológico · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 1 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-0"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 1"
+                ><img
+                  src="assets/productos/cubiertos-eco/image.webp"
+                  alt="Cubiertos de bambú · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-0"
+                aria-label="Guardar Cubiertos de bambú · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 1</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 2 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-1"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 2"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (1).webp"
+                  alt="Cubiertos de bambú · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-1"
+                aria-label="Guardar Cubiertos de bambú · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 2</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 3 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-2"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 3"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (2).webp"
+                  alt="Cubiertos de bambú · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-2"
+                aria-label="Guardar Cubiertos de bambú · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 3</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 4 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-3"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 4"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (3).webp"
+                  alt="Cubiertos de bambú · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-3"
+                aria-label="Guardar Cubiertos de bambú · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 4</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="jabón natural · modelo 1 cuidado personal un pequeño cuidado para ti y el planeta."
+            data-product-id="jabones-0"
+          >
+            <div class="product-photo">
+              <a
+                href="jabones.html"
+                aria-label="Explorar Jabón natural · Modelo 1"
+                ><img
+                  src="assets/productos/jabon-eco/image (1).webp"
+                  alt="Jabón natural · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Natural</span
+              ><button
+                class="favorite-button"
+                data-favorite="jabones-0"
+                aria-label="Guardar Jabón natural · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="jabones.html">Jabón natural · Modelo 1</a></h3>
+              <p>Un pequeño cuidado para ti y el planeta.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="jabones.html"
+                  class="product-arrow"
+                  aria-label="Ver Jabón natural · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="jabón natural · modelo 2 cuidado personal un pequeño cuidado para ti y el planeta."
+            data-product-id="jabones-1"
+          >
+            <div class="product-photo">
+              <a
+                href="jabones.html"
+                aria-label="Explorar Jabón natural · Modelo 2"
+                ><img
+                  src="assets/productos/jabon-eco/image (2).webp"
+                  alt="Jabón natural · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Natural</span
+              ><button
+                class="favorite-button"
+                data-favorite="jabones-1"
+                aria-label="Guardar Jabón natural · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="jabones.html">Jabón natural · Modelo 2</a></h3>
+              <p>Un pequeño cuidado para ti y el planeta.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="jabones.html"
+                  class="product-arrow"
+                  aria-label="Ver Jabón natural · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="jabón natural · modelo 3 cuidado personal un pequeño cuidado para ti y el planeta."
+            data-product-id="jabones-2"
+          >
+            <div class="product-photo">
+              <a
+                href="jabones.html"
+                aria-label="Explorar Jabón natural · Modelo 3"
+                ><img
+                  src="assets/productos/jabon-eco/image (3).webp"
+                  alt="Jabón natural · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Natural</span
+              ><button
+                class="favorite-button"
+                data-favorite="jabones-2"
+                aria-label="Guardar Jabón natural · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="jabones.html">Jabón natural · Modelo 3</a></h3>
+              <p>Un pequeño cuidado para ti y el planeta.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="jabones.html"
+                  class="product-arrow"
+                  aria-label="Ver Jabón natural · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="jabón natural · modelo 5 cuidado personal un pequeño cuidado para ti y el planeta."
+            data-product-id="jabones-4"
+          >
+            <div class="product-photo">
+              <a
+                href="jabones.html"
+                aria-label="Explorar Jabón natural · Modelo 5"
+                ><img
+                  src="assets/productos/jabon.webp"
+                  alt="Jabón natural · Modelo 5"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Natural</span
+              ><button
+                class="favorite-button"
+                data-favorite="jabones-4"
+                aria-label="Guardar Jabón natural · Modelo 5 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="jabones.html">Jabón natural · Modelo 5</a></h3>
+              <p>Un pequeño cuidado para ti y el planeta.</p>
+              <div class="product-bottom">
+                <span>$15.000 <small>COP</small></span
+                ><a
+                  href="jabones.html"
+                  class="product-arrow"
+                  aria-label="Ver Jabón natural · Modelo 5"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Botellas"
+            data-search="botella reutilizable · modelo 1 botellas hidrátate hoy. reutiliza mañana."
+            data-product-id="botellas-0"
+          >
+            <div class="product-photo">
+              <a
+                href="botellas.html"
+                aria-label="Explorar Botella reutilizable · Modelo 1"
+                ><img
+                  src="assets/productos/botellas/botella 2.webp"
+                  alt="Botella reutilizable · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Para cada día</span
+              ><button
+                class="favorite-button"
+                data-favorite="botellas-0"
+                aria-label="Guardar Botella reutilizable · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Botellas</span>
+              <h3>
+                <a href="botellas.html">Botella reutilizable · Modelo 1</a>
+              </h3>
+              <p>Hidrátate hoy. Reutiliza mañana.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="botellas.html"
+                  class="product-arrow"
+                  aria-label="Ver Botella reutilizable · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Botellas"
+            data-search="botella reutilizable · modelo 2 botellas hidrátate hoy. reutiliza mañana."
+            data-product-id="botellas-1"
+          >
+            <div class="product-photo">
+              <a
+                href="botellas.html"
+                aria-label="Explorar Botella reutilizable · Modelo 2"
+                ><img
+                  src="assets/productos/botellas/botella3.webp"
+                  alt="Botella reutilizable · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Para cada día</span
+              ><button
+                class="favorite-button"
+                data-favorite="botellas-1"
+                aria-label="Guardar Botella reutilizable · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Botellas</span>
+              <h3>
+                <a href="botellas.html">Botella reutilizable · Modelo 2</a>
+              </h3>
+              <p>Hidrátate hoy. Reutiliza mañana.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="botellas.html"
+                  class="product-arrow"
+                  aria-label="Ver Botella reutilizable · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Botellas"
+            data-search="botella reutilizable · modelo 3 botellas hidrátate hoy. reutiliza mañana."
+            data-product-id="botellas-2"
+          >
+            <div class="product-photo">
+              <a
+                href="botellas.html"
+                aria-label="Explorar Botella reutilizable · Modelo 3"
+                ><img
+                  src="assets/productos/botellas/botella4.webp"
+                  alt="Botella reutilizable · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Para cada día</span
+              ><button
+                class="favorite-button"
+                data-favorite="botellas-2"
+                aria-label="Guardar Botella reutilizable · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Botellas</span>
+              <h3>
+                <a href="botellas.html">Botella reutilizable · Modelo 3</a>
+              </h3>
+              <p>Hidrátate hoy. Reutiliza mañana.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="botellas.html"
+                  class="product-arrow"
+                  aria-label="Ver Botella reutilizable · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Botellas"
+            data-search="botella reutilizable · modelo 4 botellas hidrátate hoy. reutiliza mañana."
+            data-product-id="botellas-3"
+          >
+            <div class="product-photo">
+              <a
+                href="botellas.html"
+                aria-label="Explorar Botella reutilizable · Modelo 4"
+                ><img
+                  src="assets/productos/botellas/botella5.webp"
+                  alt="Botella reutilizable · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Para cada día</span
+              ><button
+                class="favorite-button"
+                data-favorite="botellas-3"
+                aria-label="Guardar Botella reutilizable · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Botellas</span>
+              <h3>
+                <a href="botellas.html">Botella reutilizable · Modelo 4</a>
+              </h3>
+              <p>Hidrátate hoy. Reutiliza mañana.</p>
+              <div class="product-bottom">
+                <span>$30.000 <small>COP</small></span
+                ><a
+                  href="botellas.html"
+                  class="product-arrow"
+                  aria-label="Ver Botella reutilizable · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="cepillo de bambú · modelo 1 cuidado personal una rutina más natural desde la mañana."
+            data-product-id="cepillos-0"
+          >
+            <div class="product-photo">
+              <a
+                href="cepillos.html"
+                aria-label="Explorar Cepillo de bambú · Modelo 1"
+                ><img
+                  src="assets/productos/cepillos-eco/image.webp"
+                  alt="Cepillo de bambú · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Bambú</span
+              ><button
+                class="favorite-button"
+                data-favorite="cepillos-0"
+                aria-label="Guardar Cepillo de bambú · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="cepillos.html">Cepillo de bambú · Modelo 1</a></h3>
+              <p>Una rutina más natural desde la mañana.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="cepillos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cepillo de bambú · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="cepillo de bambú · modelo 2 cuidado personal una rutina más natural desde la mañana."
+            data-product-id="cepillos-1"
+          >
+            <div class="product-photo">
+              <a
+                href="cepillos.html"
+                aria-label="Explorar Cepillo de bambú · Modelo 2"
+                ><img
+                  src="assets/productos/cepillos-eco/image (1).webp"
+                  alt="Cepillo de bambú · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Bambú</span
+              ><button
+                class="favorite-button"
+                data-favorite="cepillos-1"
+                aria-label="Guardar Cepillo de bambú · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="cepillos.html">Cepillo de bambú · Modelo 2</a></h3>
+              <p>Una rutina más natural desde la mañana.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="cepillos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cepillo de bambú · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="cepillo de bambú · modelo 3 cuidado personal una rutina más natural desde la mañana."
+            data-product-id="cepillos-2"
+          >
+            <div class="product-photo">
+              <a
+                href="cepillos.html"
+                aria-label="Explorar Cepillo de bambú · Modelo 3"
+                ><img
+                  src="assets/productos/cepillos-eco/image (2).webp"
+                  alt="Cepillo de bambú · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Bambú</span
+              ><button
+                class="favorite-button"
+                data-favorite="cepillos-2"
+                aria-label="Guardar Cepillo de bambú · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="cepillos.html">Cepillo de bambú · Modelo 3</a></h3>
+              <p>Una rutina más natural desde la mañana.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="cepillos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cepillo de bambú · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cuidado personal"
+            data-search="cepillo de bambú · modelo 4 cuidado personal una rutina más natural desde la mañana."
+            data-product-id="cepillos-3"
+          >
+            <div class="product-photo">
+              <a
+                href="cepillos.html"
+                aria-label="Explorar Cepillo de bambú · Modelo 4"
+                ><img
+                  src="assets/productos/cepillos-eco/image (3).webp"
+                  alt="Cepillo de bambú · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Bambú</span
+              ><button
+                class="favorite-button"
+                data-favorite="cepillos-3"
+                aria-label="Guardar Cepillo de bambú · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cuidado personal</span>
+              <h3><a href="cepillos.html">Cepillo de bambú · Modelo 4</a></h3>
+              <p>Una rutina más natural desde la mañana.</p>
+              <div class="product-bottom">
+                <span>$12.000 <small>COP</small></span
+                ><a
+                  href="cepillos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cepillo de bambú · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Bolsas"
+            data-search="bolsa reutilizable · modelo 1 bolsas tu compañera para compras conscientes."
+            data-product-id="bolsas-0"
+          >
+            <div class="product-photo">
+              <a
+                href="bolsas.html"
+                aria-label="Explorar Bolsa reutilizable · Modelo 1"
+                ><img
+                  src="assets/productos/bolsas-ecologicas/image (1).webp"
+                  alt="Bolsa reutilizable · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="bolsas-0"
+                aria-label="Guardar Bolsa reutilizable · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bolsas</span>
+              <h3><a href="bolsas.html">Bolsa reutilizable · Modelo 1</a></h3>
+              <p>Tu compañera para compras conscientes.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="bolsas.html"
+                  class="product-arrow"
+                  aria-label="Ver Bolsa reutilizable · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Bolsas"
+            data-search="bolsa reutilizable · modelo 2 bolsas tu compañera para compras conscientes."
+            data-product-id="bolsas-1"
+          >
+            <div class="product-photo">
+              <a
+                href="bolsas.html"
+                aria-label="Explorar Bolsa reutilizable · Modelo 2"
+                ><img
+                  src="assets/productos/bolsas-ecologicas/image (2).webp"
+                  alt="Bolsa reutilizable · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="bolsas-1"
+                aria-label="Guardar Bolsa reutilizable · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bolsas</span>
+              <h3><a href="bolsas.html">Bolsa reutilizable · Modelo 2</a></h3>
+              <p>Tu compañera para compras conscientes.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="bolsas.html"
+                  class="product-arrow"
+                  aria-label="Ver Bolsa reutilizable · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Bolsas"
+            data-search="bolsa reutilizable · modelo 3 bolsas tu compañera para compras conscientes."
+            data-product-id="bolsas-2"
+          >
+            <div class="product-photo">
+              <a
+                href="bolsas.html"
+                aria-label="Explorar Bolsa reutilizable · Modelo 3"
+                ><img
+                  src="assets/productos/bolsas-ecologicas/image (3).webp"
+                  alt="Bolsa reutilizable · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="bolsas-2"
+                aria-label="Guardar Bolsa reutilizable · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bolsas</span>
+              <h3><a href="bolsas.html">Bolsa reutilizable · Modelo 3</a></h3>
+              <p>Tu compañera para compras conscientes.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="bolsas.html"
+                  class="product-arrow"
+                  aria-label="Ver Bolsa reutilizable · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Bolsas"
+            data-search="bolsa reutilizable · modelo 4 bolsas tu compañera para compras conscientes."
+            data-product-id="bolsas-3"
+          >
+            <div class="product-photo">
+              <a
+                href="bolsas.html"
+                aria-label="Explorar Bolsa reutilizable · Modelo 4"
+                ><img
+                  src="assets/productos/bolsas-ecologicas/image (5).webp"
+                  alt="Bolsa reutilizable · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="bolsas-3"
+                aria-label="Guardar Bolsa reutilizable · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Bolsas</span>
+              <h3><a href="bolsas.html">Bolsa reutilizable · Modelo 4</a></h3>
+              <p>Tu compañera para compras conscientes.</p>
+              <div class="product-bottom">
+                <span>$40.000 <small>COP</small></span
+                ><a
+                  href="bolsas.html"
+                  class="product-arrow"
+                  aria-label="Ver Bolsa reutilizable · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div></article
+        ></template>
+        <p class="empty-state" hidden>
+          No encontramos productos.
+          <a href="productos.html">Ver todos los productos</a>
+        </p>
+        <p class="catalog-note">
+          ¿Encontraste algo para ti?
+          <a href="contacto.html">Escríbenos para consultar disponibilidad.</a>
+        </p>
+      </section>
     </main>
-
     <footer class="footer">
-
-        <p>© 2026 ViveVerde</p>
-
+      <div class="shell footer-top">
+        <div>
+          <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+              <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+            ><span
+              >vive<span class="brand-light">verde</span
+              ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+            ></a
+          >
+          <p>Una vida más simple.<br />Un futuro más verde.</p>
+        </div>
+        <div>
+          <h3>Explora ViveVerde</h3>
+          <a href="productos.html">Nuestros productos</a
+          ><a href="sobre-nosotros.html">Nuestra historia</a>
+        </div>
+        <div>
+          <h3>Hagamos el cambio</h3>
+          <a href="calculadora.html">Calcula tu huella</a
+          ><a href="contacto.html">Hablemos</a>
+        </div>
+        <div class="footer-note">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+            <path d="M3 21 15 9M9 15v-5m0 5h5" />
+          </svg>
+          <p>Cuidar el planeta empieza<br />con lo que elegimos cada día.</p>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>© 2026 ViveVerde. Hecho con conciencia.</span
+        ><span>Pequeñas acciones, gran impacto.</span>
+      </div>
     </footer>
-</body>
-
+    <dialog id="search-dialog" aria-labelledby="search-title">
+      <div class="dialog-heading">
+        <h2 id="search-title">Encuentra tu próximo cambio</h2>
+        <button
+          class="icon-button"
+          id="search-close"
+          aria-label="Cerrar búsqueda"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <form action="productos.html" class="search-form">
+        <label for="search-input">¿Qué estás buscando?</label>
+        <div>
+          <input
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="Prueba con bambú, jabón, botella…"
+            required
+          /><button class="btn" type="submit">
+            Buscar
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>

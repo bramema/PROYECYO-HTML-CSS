@@ -1,138 +1,511 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViveVerde | Cubiertos</title>
-
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <div class="logo">
-            <img src="imagenas_para_el_proyecto/logo/logo3.png" alt="">
-            
-        </div>
-
-        <div>
-            <h1 class="a">Cubiertos</h1>
-        </div>
-
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="sobre-nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="calculadora.html">calculadora</a>
-        </nav>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ViveVerde: productos ecológicos y reutilizables para hacer de cada día una elección más consciente."
+    />
+    <meta name="theme-color" content="#284b36" />
+    <title>ViveVerde | Cubiertos de bambú</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="announcement" role="region" aria-label="Nuestro propósito">
+      Pequeñas acciones, un planeta más verde.
+      <span
+        >Descubre una forma de vivir más consciente
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+      ></span>
+    </div>
+    <header class="header shell">
+      <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+        ><span
+          >vive<span class="brand-light">verde</span
+          ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+        ></a
+      >
+      <nav class="nav" id="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a
+        ><a href="productos.html" aria-current="page">Productos</a
+        ><a href="sobre-nosotros.html">Nosotros</a
+        ><a href="contacto.html">Contacto</a
+        ><a href="calculadora.html">Calculadora de huella</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="search-open"
+          aria-label="Buscar productos"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" />
+          </svg></button
+        ><a
+          class="icon-button saved-link"
+          href="productos.html?favoritos=1"
+          aria-label="Ver favoritos"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+            /></svg
+          ><span id="favorite-count">0</span></a
+        ><button
+          class="icon-button menu-button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </header>
-
-    <!-- CATÁLOGO -->
-
-    <main class="contenedor-catalogo">
-
-        <!-- SIDEBAR -->
-
-        <aside class="sidebar">
-
-            <h3>Categorías</h3>
-
-            <ul>
-                <a href="/proyecto/kit.html"><button class="boton-catalogo">Kit</button></a>
-                <a href="/proyecto/botellas.html"><button class="boton-catalogo">Botellas</button></a>
-                <a href="/proyecto/jabones.html"><button class="boton-catalogo">Jabones</button></a>
-                <a href="/proyecto/bolsas.html"><button class="boton-catalogo">Bolsas</button></a>
-                <a href="/proyecto/cubiertos.html"><button class="boton-catalogo">cubiertos</button></a>
-                <a href="/proyecto/cepillos.html"><button class="boton-catalogo">Cepillo</button></a>
-                
-            </ul>
-
-        </aside>
-
-        <!-- PRODUCTOS -->
-
-        <section class="catalogo">
-
-        
-
-            <div class="grid-catalogo">
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/cubiertos-eco/image.png">
-                    <h3>Cubiertos</h3>
-                    <p>$100.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/cubiertos-eco/image (1).png">
-                    <h3>Cubiertos</h3>
-                    <p>$100.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/cubiertos-eco/image (2).png">
-                    <h3>Cubiertos</h3>
-                    <p>$100.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                <article class="card-producto">
-                    <img src="imagenas_para_el_proyecto/productos/cubiertos-eco/image (3).png">
-                    <h3>Cubiertos</h3>
-                    <p>$100.000</p>
-                    <button class="favorito">❤</button>
-                </article>
-
-                
-                
+    <main id="contenido">
+      <div class="page-intro shell">
+        <span class="eyebrow">ELECCIONES CON PROPÓSITO</span>
+        <h1>Cubiertos de bambú</h1>
+        <p>Lleva tus buenos hábitos a todas partes.</p>
+      </div>
+      <section class="shell catalog-section">
+        <nav class="category-tabs" aria-label="Categorías">
+          <a href="productos.html" class="category-tab">Todos</a
+          ><a class="category-tab" href="kit.html">Kit ecológico</a
+          ><a class="category-tab" href="cubiertos.html" aria-current="page"
+            >Cubiertos de bambú</a
+          ><a class="category-tab" href="jabones.html">Jabón natural</a
+          ><a class="category-tab" href="botellas.html">Botella reutilizable</a
+          ><a class="category-tab" href="cepillos.html">Cepillo de bambú</a
+          ><a class="category-tab" href="bolsas.html">Bolsa reutilizable</a>
+        </nav>
+        <div class="catalog-toolbar">
+          <p>4 productos · Precios en COP</p>
+          <a class="text-link" href="contacto.html"
+            >Consultar disponibilidad
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+        <div class="product-grid">
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 1 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-0"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 1"
+                ><img
+                  src="assets/productos/cubiertos-eco/image.webp"
+                  alt="Cubiertos de bambú · Modelo 1"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-0"
+                aria-label="Guardar Cubiertos de bambú · Modelo 1 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
             </div>
-
-            
-            </section>
-
-            <!-- PRODUCTOS JUNTOS -->
-
-        <section class="catalogo">
-
-            <div class="grid-catalogo">
-
-               
-                </article>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 1</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 1"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
             </div>
-
-            </section>
-
-            <!-- PAGINACIÓN -->
-
-            <div class="paginacion">
-
-                <button>Anterior</button>
-                <button>1</button>
-                
-                <button>Siguiente</button>
-
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 2 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-1"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 2"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (1).webp"
+                  alt="Cubiertos de bambú · Modelo 2"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-1"
+                aria-label="Guardar Cubiertos de bambú · Modelo 2 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
             </div>
-
-        </section>
-
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 2</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 2"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 3 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-2"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 3"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (2).webp"
+                  alt="Cubiertos de bambú · Modelo 3"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-2"
+                aria-label="Guardar Cubiertos de bambú · Modelo 3 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 3</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 3"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+          <article
+            class="product-card"
+            data-category="Cubiertos"
+            data-search="cubiertos de bambú · modelo 4 cubiertos lleva tus buenos hábitos a todas partes."
+            data-product-id="cubiertos-3"
+          >
+            <div class="product-photo">
+              <a
+                href="cubiertos.html"
+                aria-label="Explorar Cubiertos de bambú · Modelo 4"
+                ><img
+                  src="assets/productos/cubiertos-eco/image (3).webp"
+                  alt="Cubiertos de bambú · Modelo 4"
+                  loading="lazy"
+                  width="600"
+                  height="600" /></a
+              ><span class="product-badge">Reutilizable</span
+              ><button
+                class="favorite-button"
+                data-favorite="cubiertos-3"
+                aria-label="Guardar Cubiertos de bambú · Modelo 4 en favoritos"
+                aria-pressed="false"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Cubiertos</span>
+              <h3>
+                <a href="cubiertos.html">Cubiertos de bambú · Modelo 4</a>
+              </h3>
+              <p>Lleva tus buenos hábitos a todas partes.</p>
+              <div class="product-bottom">
+                <span>$100.000 <small>COP</small></span
+                ><a
+                  href="cubiertos.html"
+                  class="product-arrow"
+                  aria-label="Ver Cubiertos de bambú · Modelo 4"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14m-6-6 6 6-6 6" /></svg
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
-
     <footer class="footer">
-
-        <p>© 2026 ViveVerde</p>
-
+      <div class="shell footer-top">
+        <div>
+          <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+              <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+            ><span
+              >vive<span class="brand-light">verde</span
+              ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+            ></a
+          >
+          <p>Una vida más simple.<br />Un futuro más verde.</p>
+        </div>
+        <div>
+          <h3>Explora ViveVerde</h3>
+          <a href="productos.html">Nuestros productos</a
+          ><a href="sobre-nosotros.html">Nuestra historia</a>
+        </div>
+        <div>
+          <h3>Hagamos el cambio</h3>
+          <a href="calculadora.html">Calcula tu huella</a
+          ><a href="contacto.html">Hablemos</a>
+        </div>
+        <div class="footer-note">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+            <path d="M3 21 15 9M9 15v-5m0 5h5" />
+          </svg>
+          <p>Cuidar el planeta empieza<br />con lo que elegimos cada día.</p>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>© 2026 ViveVerde. Hecho con conciencia.</span
+        ><span>Pequeñas acciones, gran impacto.</span>
+      </div>
     </footer>
-</body>
-
+    <dialog id="search-dialog" aria-labelledby="search-title">
+      <div class="dialog-heading">
+        <h2 id="search-title">Encuentra tu próximo cambio</h2>
+        <button
+          class="icon-button"
+          id="search-close"
+          aria-label="Cerrar búsqueda"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <form action="productos.html" class="search-form">
+        <label for="search-input">¿Qué estás buscando?</label>
+        <div>
+          <input
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="Prueba con bambú, jabón, botella…"
+            required
+          /><button class="btn" type="submit">
+            Buscar
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
