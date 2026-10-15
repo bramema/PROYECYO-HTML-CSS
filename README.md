@@ -17,3 +17,23 @@ Visual Studio Code: Editor de código empleado para el desarrollo de la aplicaci
 
 
 Las capturas de pantalla estan en una carpeta en imagenes 
+
+## Ejecutar en local
+
+El sitio no requiere instalación de dependencias ni un proceso de compilación.
+Desde la raíz del repositorio:
+
+```bash
+python3 -m http.server 3000 --bind 0.0.0.0
+```
+
+Abre `http://localhost:3000/proyecto/`. Para detener el servidor, usa `Ctrl+C`.
+
+## Funcionalidades
+
+- Diseño adaptable a móvil y escritorio, navegación con teclado y búsqueda de productos.
+- Catálogo por categorías, orden por precio y favoritos guardados en el navegador.
+- Calculadora orientativa de emisiones mensuales de electricidad y transporte. Los factores y el alcance se explican en los resultados.
+- El formulario de contacto descarga una consulta como archivo de texto. No envía mensajes: el proyecto no tiene un servidor de correo ni un backend de compras.
+
+Las imágenes optimizadas están en `proyecto/assets/`. Las imágenes originales se conservan en `proyecto/imagenas_para_el_proyecto/`. Los estilos activos están en `proyecto/css/main.css` y el comportamiento compartido en `proyecto/js/main.js`.

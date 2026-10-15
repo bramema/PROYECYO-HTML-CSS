@@ -1,86 +1,303 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ViveVerde | Contacto</title>
-
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-
-<body>
-
-    <header class="header">
-
-        <div class="logo">
-            <img src="imagenas_para_el_proyecto/logo/logo3.png" alt="">
-        </div>
-        
-        <div class="a">
-            <h1 class="a">Contáctanos</h1>
-        </div>
-        
-
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="sobre-nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="calculadora.html">calculadora</a>
-        </nav>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ViveVerde: productos ecológicos y reutilizables para hacer de cada día una elección más consciente."
+    />
+    <meta name="theme-color" content="#284b36" />
+    <title>ViveVerde | Hablemos</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="announcement" role="region" aria-label="Nuestro propósito">
+      Pequeñas acciones, un planeta más verde.
+      <span
+        >Descubre una forma de vivir más consciente
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+      ></span>
+    </div>
+    <header class="header shell">
+      <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+          <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+        ><span
+          >vive<span class="brand-light">verde</span
+          ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+        ></a
+      >
+      <nav class="nav" id="navigation" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a><a href="productos.html">Productos</a
+        ><a href="sobre-nosotros.html">Nosotros</a
+        ><a href="contacto.html" aria-current="page">Contacto</a
+        ><a href="calculadora.html">Calculadora de huella</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="search-open"
+          aria-label="Buscar productos"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 5 5" />
+          </svg></button
+        ><a
+          class="icon-button saved-link"
+          href="productos.html?favoritos=1"
+          aria-label="Ver favoritos"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"
+            /></svg
+          ><span id="favorite-count">0</span></a
+        ><button
+          class="icon-button menu-button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
     </header>
-
-    <!-- CONTACTO -->
-
-    <section class="contacto">
-
-        
-
-        <form class="formulario">
-
-            <input type="text" placeholder="Nombre" required>
-
-            <input type="email" placeholder="Correo electrónico" required>
-
-            <textarea placeholder="Escribe tu mensaje" required></textarea>
-
-            <button type="submit">
-                Enviar mensaje
-            </button>
-
-        </form>
-
-    </section>
-
-    <!-- MAPA -->
-
-    <section>
-
-        <div class="mapa"> <img src="imagenas_para_el_proyecto/mapa/Captura desde 2026-05-27 17-02-22.png" alt="Mapa">
+    <main id="contenido">
+      <div class="page-intro shell">
+        <span class="eyebrow">ESTAMOS PARA ACOMPAÑARTE</span>
+        <h1>Las buenas ideas empiezan conversando.</h1>
+        <p>
+          ¿Tienes dudas sobre un producto o quieres conocer más de ViveVerde?
+        </p>
+      </div>
+      <section class="contact-layout shell">
+        <div>
+          <span class="eyebrow">HABLEMOS DE TU PRÓXIMO CAMBIO</span>
+          <h2>Un paso más cerca<br />de vivir <em>verde.</em></h2>
+          <p>
+            Cuéntanos qué estás buscando. Puedes preparar tu consulta aquí y
+            guardar una copia del mensaje.
+          </p>
+          <div class="contact-note">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+              <path d="M3 21 15 9M9 15v-5m0 5h5" />
+            </svg>
+            <p>
+              Este sitio es una muestra de ViveVerde. El formulario prepara un
+              archivo con tu consulta; no envía mensajes.
+            </p>
+          </div>
         </div>
-
-    </section>
-
-    <!-- REDES -->
-
-    <section class="redes-sociales">
-
-        <a href="https://www.facebook.com/login">Facebook <img src="imagenas_para_el_proyecto/logos redes/facebook.svg" alt=""></a>
-        <a href="https://www.instagram.com/">Instagram <img src="imagenas_para_el_proyecto/logos redes/instagram.svg" alt=""></a>
-        <a href="https://www.tiktok.com/">TikTok <img src="imagenas_para_el_proyecto/logos redes/tik-tok.png" alt=""></a>
-
-    </section>
+        <form id="contact-form" class="form-panel">
+          <label for="name"
+            >Tu nombre<input
+              id="name"
+              name="nombre"
+              autocomplete="name"
+              placeholder="¿Cómo te llamas?"
+              required
+              maxlength="100" /></label
+          ><label for="email"
+            >Correo electrónico<input
+              id="email"
+              name="correo"
+              type="email"
+              autocomplete="email"
+              placeholder="tu@correo.com"
+              required
+              maxlength="200" /></label
+          ><label for="subject"
+            >¿En qué podemos ayudarte?<select id="subject" name="asunto">
+              <option>Consulta sobre un producto</option>
+              <option>Conocer más sobre ViveVerde</option>
+              <option>Otra consulta</option>
+            </select></label
+          ><label for="message"
+            >Tu mensaje<textarea
+              id="message"
+              name="mensaje"
+              placeholder="Cuéntanos un poco más…"
+              required
+              maxlength="3000"
+              rows="5"
+            ></textarea></label
+          ><button class="btn" type="submit">
+            Guardar mi consulta
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </button>
+          <p id="contact-status" class="form-note" role="status"></p>
+        </form>
+      </section>
+    </main>
     <footer class="footer">
-
-        <p>© 2026 ViveVerde</p>
-
+      <div class="shell footer-top">
+        <div>
+          <a class="brand" href="index.html" aria-label="ViveVerde, inicio"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+              <path d="M3 21 15 9M9 15v-5m0 5h5" /></svg
+            ><span
+              >vive<span class="brand-light">verde</span
+              ><small>PEQUEÑAS ACCIONES, GRAN IMPACTO</small></span
+            ></a
+          >
+          <p>Una vida más simple.<br />Un futuro más verde.</p>
+        </div>
+        <div>
+          <h3>Explora ViveVerde</h3>
+          <a href="productos.html">Nuestros productos</a
+          ><a href="sobre-nosotros.html">Nuestra historia</a>
+        </div>
+        <div>
+          <h3>Hagamos el cambio</h3>
+          <a href="calculadora.html">Calcula tu huella</a
+          ><a href="contacto.html">Hablemos</a>
+        </div>
+        <div class="footer-note">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 3C9 2 3 7 5 14c2 7 14 7 15-11Z" />
+            <path d="M3 21 15 9M9 15v-5m0 5h5" />
+          </svg>
+          <p>Cuidar el planeta empieza<br />con lo que elegimos cada día.</p>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>© 2026 ViveVerde. Hecho con conciencia.</span
+        ><span>Pequeñas acciones, gran impacto.</span>
+      </div>
     </footer>
-</body>
-
+    <dialog id="search-dialog" aria-labelledby="search-title">
+      <div class="dialog-heading">
+        <h2 id="search-title">Encuentra tu próximo cambio</h2>
+        <button
+          class="icon-button"
+          id="search-close"
+          aria-label="Cerrar búsqueda"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M6 18 18 6" />
+          </svg>
+        </button>
+      </div>
+      <form action="productos.html" class="search-form">
+        <label for="search-input">¿Qué estás buscando?</label>
+        <div>
+          <input
+            type="search"
+            id="search-input"
+            name="q"
+            placeholder="Prueba con bambú, jabón, botella…"
+            required
+          /><button class="btn" type="submit">
+            Buscar
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m16 16 5 5" />
+            </svg>
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
